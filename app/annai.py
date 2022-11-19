@@ -5,6 +5,7 @@ import openai
 import PyPDF2
 from dotenv import load_dotenv
 from google.cloud import speech, storage, vision
+from pytube import YouTube
 
 load_dotenv()
 openai.api_key = os.getenv("OPENAI_API_KEY")
@@ -24,7 +25,9 @@ def main():
 							"thing Harry liked about his own appearance was a very thin scar on his forehead that was shaped like a bolt of lightning. He "
 							"had had it as long as he could remember, and the first question he could ever remember asking his Aunt Petunia was how he had gotten it."))
 	"""
-	# print(generate_questions("Harry was a short boy. Harry had an invisible cape gifted to him at the age of 12. Harry grew up poor and went to Hogwarts."))
+	#print(generate_questions("Harry was a short boy. Harry had an invisible cape gifted to him at the age of 12. Harry grew up poor and went to Hogwarts."))
+	
+	
 	bucket_name = 'annai_demo_bucket'
 	mp3_file_to_upload = './tests/audio_prompt3.mp3'
 	cloud_blob_name = 'annai_demo'
@@ -43,6 +46,7 @@ def main():
 	# QUESTIONS FROM MP3
 	# t2 = transcript_pdf('./tests/pdf_prompt2.pdf')
 	# print(generate_questions(t2))
+	#youtube_to_mp3("https://www.youtube.com/watch?v=rUWxSEwctFU", './inputs/yt-demo.mp3')
 	
 
 # Function to take in text and generate questions
@@ -113,5 +117,12 @@ def transcript_pdf(file_path):
 	res = pageObj.extractText()
 	pdfFileObj.close()
 	return res
+
+def youtube_to_mp3(link: str, filename):
+	yt = YouTube(link)
+	video = yt.streams.filter(only_audio=True).first()
+	outfile = video.download(output_path='./inputs/')
+	os.rename(outfile, filename)
+
 
 main()
