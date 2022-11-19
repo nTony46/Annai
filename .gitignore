@@ -42,8 +42,10 @@ yarn-error.log*
 .npm/
 dist
 
+
 # API KEYS AND STUFF
 /app/.env
 /app/cred.json
 /venv/
 /app/__pycache__
+
