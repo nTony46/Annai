@@ -58,7 +58,7 @@ def generate_questions(prompt: str):
 	)
 	questions = resp["choices"][0]["text"].strip()
 	questions_arr = re.split('\n', questions)
-	questions_arr = [re.sub(r'\d. ', '', q) for q in questions_arr if q]
+	questions_arr = [re.sub(r'\d. ', '', q) for q in questions_arr if q and q[-1] == "?"]
 
 	return questions_arr
 
