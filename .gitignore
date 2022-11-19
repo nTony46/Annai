@@ -46,3 +46,4 @@ dist
 /app/.env
 /app/cred.json
 /venv/
+/app/__pycache__
