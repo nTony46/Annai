@@ -1,0 +1,25 @@
+.base-style {
+  background-color: #94cae8;
+  border: 0;
+  text-align: center;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.text-style {
+  font-family: "Poppins";
+  font-size: 1rem;
+  color: black;
+  user-select: none;
+}
+
+.block {
+  width: 75vw;
+  margin: 0.5rem 0;
+  padding: 0.75rem 0;
+}
+
+.invert {
+  border: 2px solid #94cae8;
+  background-color: white;
+}
