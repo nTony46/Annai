@@ -1,0 +1,14 @@
+.logo-container,
+.nav-container {
+  display: flex;
+}
+
+.logo-container {
+  align-items: center;
+  flex-grow: 3;
+}
+
+.nav-container {
+  flex-direction: column;
+  flex-grow: 2;
+}

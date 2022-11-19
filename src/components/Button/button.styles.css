@@ -1,0 +1,12 @@
+.base-style {
+  background-color: #94cae8;
+  border: 0;
+  font-family: "Poppins";
+  font-size: 1rem;
+}
+
+.block {
+  width: 75vw;
+  margin: 0.5rem 0;
+  padding: 0.75rem 0;
+}
