@@ -29,8 +29,12 @@ function App() {
           setErrorMsg("");
         }
         setLoading(false);
-        navigate("/results", response.data);
         console.log(response.data);
+        if (response.data?.questions.length) {
+          navigate("/result", { state: response.data });
+        } else {
+          throw new Error("No results");
+        }
       })
       .catch((e) => {
         console.error(e);

@@ -1,0 +1,18 @@
+.result-container {
+  margin: 1rem 2rem;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.result-question {
+  margin-bottom: 1rem;
+}
+
+.button-container {
+  margin-top: 0.5rem;
+  text-align: center;
+}

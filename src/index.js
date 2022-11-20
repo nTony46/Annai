@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
-import { Root, Upload } from "./routes";
+import { Result, Root, Upload } from "./routes";
 import reportWebVitals from "./reportWebVitals";
 require("typeface-poppins");
 
@@ -14,6 +14,10 @@ const router = createBrowserRouter([
   {
     path: "upload",
     element: <Upload />,
+  },
+  {
+    path: "result",
+    element: <Result />,
   },
 ]);
 
