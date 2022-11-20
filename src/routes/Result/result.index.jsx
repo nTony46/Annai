@@ -17,7 +17,7 @@ const Results = () => {
             <p className="result-question">
               <strong>{i + 1}.</strong> {question}
             </p>
-            <textarea placeholder="My notes" />
+            <textarea id="answerbox" placeholder="My notes" />
             <div className="button-container">
               <Button text="Save" />
             </div>

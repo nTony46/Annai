@@ -6,6 +6,7 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 2rem;
+  margin-left: auto;
 }
 
 .result-question {
@@ -17,8 +18,24 @@
 .button-container {
   margin-top: 0.5rem;
   text-align: center;
+  grid-column-start: 3;
 }
 
 .button-container button {
   font-family: "Poppins";
+}
+
+#answerbox{
+  border-radius: 5px;
+  padding: 1em;
+  border: 2px solid;
+  border-color: #454545;
+  font-size: 16px;
+}
+
+
+#answerbox:focus{
+  cursor: text;
+  outline: none;
+  border:2px solid;
 }
