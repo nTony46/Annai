@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Layout } from "../../components";
+import { Button, Layout } from "../../components";
 import axios from "axios";
 import "./upload.styles.css";
 import { TailSpin } from "react-loader-spinner";
@@ -62,7 +62,7 @@ function App() {
           <form className="form-container" onSubmit={handleSubmit}>
             <h1>File Upload</h1>
             <input type="file" onChange={handleChange} />
-            <button type="submit">Upload</button>
+            <Button type="submit" block text="Upload File" />
           </form>
         </div>
       ) : (

@@ -3,10 +3,16 @@
   width: 80vw;
 }
 
-/* .form-container {
+.form-container {
   display: flex;
+  align-items: center;
   flex-direction: column;
-} */
+}
+
+.form-container input {
+  margin-left: 3rem;
+  margin-bottom: 5rem;
+}
 
 .loading-container {
   margin-top: 40vh;
