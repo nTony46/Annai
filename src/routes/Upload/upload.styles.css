@@ -10,10 +10,17 @@
 }
 
 .form-container input {
-  margin-left: 3rem;
+  margin-left: 3.3rem;
   margin-bottom: 5rem;
 }
 
 .loading-container {
   margin-top: 40vh;
+}
+
+.error-msg {
+  padding: 0 3rem;
+  text-align: center;
+  color: #cc3300;
+  font-family: "Poppins";
 }

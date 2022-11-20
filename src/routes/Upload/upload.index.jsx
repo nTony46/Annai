@@ -25,7 +25,7 @@ function App() {
     setErrorMsg("");
     if (file.type === "application/pdf") {
       url = "http://localhost:8000/generate_questions_pdf";
-    } else if (file.type === "audio.mpeg") {
+    } else if (file.type === "audio/mpeg") {
       url = "http://localhost:8000/generate_questions_mp3";
     } else {
       setErrorMsg("You must choose a PDF or MP3");
@@ -62,7 +62,7 @@ function App() {
           <form className="form-container" onSubmit={handleSubmit}>
             <h1>File Upload</h1>
             <input type="file" onChange={handleChange} />
-            <Button type="submit" block text="Upload File" />
+            <Button type="submit" disabled={!file} block text="Upload File" />
           </form>
         </div>
       ) : (
@@ -79,9 +79,7 @@ function App() {
           />
         </div>
       )}
-      {errorMsg && (
-        <h3 style={{ color: "red" }}>{errorMsg}. Please try again.</h3>
-      )}
+      {errorMsg && <h3 className="error-msg">{errorMsg}. Please try again.</h3>}
     </Layout>
   );
 }
