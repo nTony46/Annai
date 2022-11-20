@@ -1,5 +1,5 @@
 # Annai
-We can take PDFs and MP3s and generate questions based on the content from them. We then display those questions to act as a study guide for our users.
+We can take PDFs and MP3s and generate questions based on the content from them. We then display those questions to act as a study guide for our users. Check out the [Devpost!](https://devpost.com/software/annai)
 
 ## Inspiration
 We first thought of a product which can reach many people, especially people in school. We all had some trouble staying engaged when reading or studying pages of material, so we decided to make a tool to fix that.
