@@ -17,10 +17,21 @@ function App() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    const url = "http://localhost:8000/generate_questions_pdf";
+    let url;
     const formData = new FormData();
     formData.append("file", file);
     const config = {};
+
+    setErrorMsg("");
+    if (file.type === "application/pdf") {
+      url = "http://localhost:8000/generate_questions_pdf";
+    } else if (file.type === "audio.mpeg") {
+      url = "http://localhost:8000/generate_questions_mp3";
+    } else {
+      setErrorMsg("You must choose a PDF or MP3");
+      throw new Error();
+    }
+
     setLoading(true);
     axios
       .post(url, formData, config)
@@ -48,23 +59,25 @@ function App() {
       {!loading ? (
         <div className="App">
           <img className="hero-img" src="../../No data-pana.png" />
-          <form onSubmit={handleSubmit}>
+          <form className="form-container" onSubmit={handleSubmit}>
             <h1>File Upload</h1>
             <input type="file" onChange={handleChange} />
             <button type="submit">Upload</button>
           </form>
         </div>
       ) : (
-        <TailSpin
-          height="80"
-          width="80"
-          color="#94cae8"
-          ariaLabel="tail-spin-loading"
-          radius="1"
-          wrapperStyle={{}}
-          wrapperClass=""
-          visible={true}
-        />
+        <div className="loading-container">
+          <TailSpin
+            height="80"
+            width="80"
+            color="#94cae8"
+            ariaLabel="tail-spin-loading"
+            radius="1"
+            wrapperStyle={{}}
+            wrapperClass=""
+            visible={true}
+          />
+        </div>
       )}
       {errorMsg && (
         <h3 style={{ color: "red" }}>{errorMsg}. Please try again.</h3>

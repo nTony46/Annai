@@ -2,3 +2,12 @@
   margin-top: 5rem;
   width: 80vw;
 }
+
+/* .form-container {
+  display: flex;
+  flex-direction: column;
+} */
+
+.loading-container {
+  margin-top: 40vh;
+}

@@ -6,7 +6,9 @@ export default function Layout({ children, hidden }) {
   return (
     <div className="container">
       <header className={`layout-header ${hidden && "hidden"}`}>
-        <Logo sm />
+        <a className="no-text-dec" href="/">
+          <Logo sm />
+        </a>
       </header>
       <>{children}</>
     </div>

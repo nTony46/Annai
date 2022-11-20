@@ -1,5 +1,5 @@
 import { useLocation } from "react-router-dom";
-import { Layout } from "../../components";
+import { Button, Layout } from "../../components";
 import "./result.styles.css";
 
 const Results = () => {
@@ -14,12 +14,12 @@ const Results = () => {
       <div className="result-container">
         {questions.map((question, i) => (
           <div className="result" key={i}>
-            <span className="result-question">
-              {i + 1}. {question}
-            </span>
+            <p className="result-question">
+              <strong>{i + 1}.</strong> {question}
+            </p>
             <textarea placeholder="My notes" />
             <div className="button-container">
-              <button>Save</button>
+              <Button text="Save" />
             </div>
           </div>
         ))}
