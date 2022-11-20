@@ -23,7 +23,7 @@ We first thought of a product which can reach many people, especially people in 
 ```
 git clone https://github.com/nTony46/ANNAI
 
-// Inside app/ Create a .env file to set OPENAI_API Key,
+// Inside app/ Create a .env file to set OPENAI_API_KEY,
 // create a Google Cloud Key, put the cred.json in the directory
 
 // Starting at main directory
