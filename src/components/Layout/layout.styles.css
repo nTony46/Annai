@@ -4,6 +4,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-image: url("../../../public/Artboard\ 1.png");
+  background-size: 800px;
+  background-repeat: no-repeat;
 }
 
 .hidden {

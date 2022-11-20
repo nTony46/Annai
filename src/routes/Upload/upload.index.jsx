@@ -4,8 +4,9 @@ import "./upload.styles.css";
 
 export default function Upload() {
   return (
-    <Layout>
+    <Layout center>
       <img className="hero-img" src="../../No data-pana.png" />
+      <input type="file"></input>
     </Layout>
   );
 }

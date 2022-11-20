@@ -5,7 +5,7 @@ function onSubmit() {}
 
 export default function Root() {
   return (
-    <Layout center hidden>
+    <Layout hidden>
       <div className="logo-container">
         <Logo lg />
       </div>
