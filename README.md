@@ -35,6 +35,7 @@ cd app
 uvicorn annai_api:app --reload
 
 // New terminal at main directory
+npm install
 npm run start
 
 // The app should be hosted at http://localhost:3000/
