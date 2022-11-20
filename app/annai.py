@@ -51,7 +51,7 @@ def main():
 
 # Function to take in text and generate questions
 def generate_questions(prompt: str):
-	openai_prompt = f"Generate a detailed list of reading comprehension questions based on this text:\n\n{prompt}"
+	openai_prompt = f"Generate a detailed list of unique reading comprehension questions based on this text:\n\n{prompt}"
 
 	resp = openai.Completion.create(
 		model = "text-davinci-002", prompt=openai_prompt, temperature=0.7, max_tokens=256
