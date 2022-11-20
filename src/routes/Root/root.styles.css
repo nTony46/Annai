@@ -4,11 +4,19 @@
 }
 
 .logo-container {
-  align-items: center;
-  flex-grow: 3;
+  flex-grow: 2;
+  align-items: flex-end;
+}
+
+.image-container {
+  flex-grow: 1;
 }
 
 .nav-container {
+  flex-grow: 3;
   flex-direction: column;
-  flex-grow: 2;
+}
+
+.image-container .hero-img {
+  margin-top: 0;
 }
